@@ -1,0 +1,11 @@
+train: C:/Users/User/Desktop/lab/0730_deeplearning2/dataset_yolov5/train/images
+val: C:/Users/User/Desktop/lab/0730_deeplearning2/dataset_yolov5/valid/images
+test: C:/Users/User/Desktop/lab/0730_deeplearning2/dataset_yolov5/test/images
+
+#nc: 3  # 類別數量
+#names: ['Initial', 'Middle', 'Harvest']  # 類別名稱列表
+
+names:
+  0: Initial
+  1: Middle
+  2: Harvest
