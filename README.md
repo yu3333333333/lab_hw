@@ -5,7 +5,9 @@
 
 ## 1. 準備資料
 首先準備要訓練的資料集，可以用這個架構區分train, validation, test三種資料集，架構圖如下：
-![截圖 2024-08-25 下午10.14.39](https://hackmd.io/_uploads/Byvdh2_o0.png =20%x)
+<p>
+    <img src='./image/architechture.png' width="10%">
+<p>
 每個資料夾中各有images、labels兩資料夾，分別放jpg和txt檔，因此前置作業要先將原始檔案中的json格式轉為txt格式。
 
 我準備的資料集中，train/valid/test = 277/70/105 筆。
@@ -13,7 +15,9 @@
 <br/>
 
 接下來要準備一個 **data.yaml** 檔，負責設定路徑跟標記類別數量( nc )、標記名稱(names)，以下為我的範例：
-![截圖 2024-08-25 下午10.36.45](https://hackmd.io/_uploads/Bk5tWadoC.png =60%x)
+<p>
+    <img src='./image/data.yaml_picture.png' width="40%">
+<p>
 
 
 
@@ -51,7 +55,9 @@ https://github.com/ultralytics/ultralytics
     訓練完後的資料會出現在runs/detect/train底下，訓練好的模型放在runs/detect/train/weights底下。
 
     我測試下來較佳的參數配置為epoch=223,batch=64，出來的結果如下，precision達0.906：
-    ![image](https://hackmd.io/_uploads/H1ge_MC_oR.png =80%x)
+    <p align="center">
+        <img src='./image/result_picture.png'  width="50%"/>
+    </p>
 
     **我最佳的訓練權重檔案:**
     https://drive.google.com/drive/folders/1LHVnplcV6Tb5I7Y7_XHa8xa-89-Zzq_1?usp=sharing
@@ -83,4 +89,6 @@ https://github.com/ultralytics/ultralytics
     result = model.predict(source="/home/tzul/candy/dataset_yolov5/test/images", mode="predict", save=True, device="cuda")
     ```
     實際預測圖類似這樣：
-![截圖 2024-08-25 下午11.04.36](https://hackmd.io/_uploads/HkbzdpOjA.png =50%x)
+<p align="center">
+        <img src='./image/predict_picture.png'  width="30%"/>
+    </p>
