@@ -1,8 +1,6 @@
  # Lab: DeepLearning2 pracitice: yolov8
 ###### b11611001王宥姍
 
-## Read Me
-
 <br/>
 
 ## 1. 準備資料
@@ -51,7 +49,7 @@ https://github.com/ultralytics/ultralytics
     ```
     可以調整epoch, batch參數，或自行新增。
     訓練完後的資料會出現在runs/detect/train底下，訓練好的模型放在runs/detect/train/weights底下。
-    
+
     我測試下來較佳的參數配置為epoch=223,batch=64，出來的結果如下，precision達0.906：
     ![image](https://hackmd.io/_uploads/H1ge_MC_oR.png =80%x)
 
@@ -79,9 +77,9 @@ https://github.com/ultralytics/ultralytics
     可以用這個指令來存取經由best.py預測出來的實際預測圖。
     ```
     from ultralytics import YOLO
-    
+
     model = YOLO("/home/tzul/candy/runs/detect/e150_b64/weights/best.pt")
-    
+
     result = model.predict(source="/home/tzul/candy/dataset_yolov5/test/images", mode="predict", save=True, device="cuda")
     ```
     實際預測圖類似這樣：
